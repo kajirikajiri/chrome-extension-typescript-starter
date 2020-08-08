@@ -69,6 +69,3 @@ Load `dist` directory
 
 ## Test
 `npx jest` or `npm run test`
-
-## browser-polifill.js
-https://github.com/mozilla/webextension-polyfill

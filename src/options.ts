@@ -4,8 +4,7 @@ import * as $ from 'jquery';
 function save_options() {
   var color = $('#color').val();
   var likesColor = $('#like').prop('checked');
-  (async function(){
-    await browser.storage.sync.set({
+  chrome.storage.sync.set({
     favoriteColor: color,
     likesColor: likesColor
   }, function() {
@@ -16,22 +15,19 @@ function save_options() {
       status.text('');
     }, 750);
   });
-  }())
 }
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
-  (async function(){
-  await browser.storage.sync.get({
+  chrome.storage.sync.get({
     favoriteColor: 'red',
     likesColor: true
   }, function(items: {favoriteColor, likesColor}) {
     $('#color').val(items.favoriteColor);
     $('#like').prop('checked', items.likesColor);
   });
-  }())
 }
 
 $('#save').click(save_options);
