@@ -1,5 +1,6 @@
 import * as moment from 'moment';
 import * as $ from 'jquery';
+import {increment} from './increment';
 
 let count = 0;
 
@@ -16,7 +17,8 @@ $(function() {
 
   chrome.browserAction.setBadgeText({text: count.toString()});
   $('#countUp').click(()=>{
-    chrome.browserAction.setBadgeText({text: (++count).toString()});
+    count = increment(count)
+    chrome.browserAction.setBadgeText({text: count.toString()});
   });
 
   $('#changeBackground').click(()=>{
