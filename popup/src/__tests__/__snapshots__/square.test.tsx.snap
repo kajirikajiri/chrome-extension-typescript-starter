@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Square class 1`] = `
+<button
+  className="square"
+  data-test="square"
+  onClick={[Function]}
+>
+  1
+</button>
+`;

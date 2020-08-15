@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game class 1`] = `
+<div
+  className="game"
+>
+  <div
+    className="game-board"
+  >
+    <div>
+      <div
+        className="board-row"
+      >
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+      </div>
+      <div
+        className="board-row"
+      >
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+      </div>
+      <div
+        className="board-row"
+      >
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+        <button
+          className="square"
+          data-test="square"
+          onClick={[Function]}
+        >
+          
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="game-info"
+  >
+    <div
+      className="status"
+      data-test="gameStatus"
+    >
+      Next player: X
+    </div>
+    <ol>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          Go to game start
+        </button>
+      </li>
+    </ol>
+  </div>
+</div>
+`;
