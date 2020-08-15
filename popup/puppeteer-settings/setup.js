@@ -14,7 +14,14 @@ process.argv.forEach((arg) => {
 const headless = e2eHeadFull ? false : true;
 
 module.exports = async function () {
-  const browser = await puppeteer.launch({ headless });
+  const pathToExtension = require("path").join(__dirname, "/../../dist");
+  const browser = await puppeteer.launch({
+    headless,
+    args: [
+      `--disable-extensions-except=${pathToExtension}`,
+      `--load-extension=${pathToExtension}`,
+    ],
+  });
   // store the browser instance so we can teardown it later
   // this global is only available in the teardown but not in TestEnvironments
   global.__BROWSER_GLOBAL__ = browser;

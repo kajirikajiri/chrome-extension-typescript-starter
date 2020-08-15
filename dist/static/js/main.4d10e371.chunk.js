@@ -7,8 +7,8 @@
       var n = a(0),
         r = a.n(n),
         c = a(3),
-        u = a(1),
-        o = function (e) {
+        o = a(1),
+        u = function (e) {
           var t = e.value,
             a = e.onClick;
           return r.a.createElement(
@@ -27,7 +27,7 @@
           var t = e.squares,
             a = e.handleClick,
             n = function (e) {
-              return r.a.createElement(o, {
+              return r.a.createElement(u, {
                 onClick: function () {
                   return a(e);
                 },
@@ -62,7 +62,7 @@
         },
         l = function (e) {
           var t = Object(n.useState)(!1),
-            a = Object(u.a)(t, 2),
+            a = Object(o.a)(t, 2),
             r = a[0],
             c = a[1];
           return (
@@ -83,11 +83,11 @@
                   a < t.length;
                   a++
                 ) {
-                  var n = Object(u.a)(t[a], 3),
+                  var n = Object(o.a)(t[a], 3),
                     r = n[0],
                     c = n[1],
-                    o = n[2];
-                  if (e[r] && e[r] === e[c] && e[r] === e[o]) return e[r];
+                    u = n[2];
+                  if (e[r] && e[r] === e[c] && e[r] === e[u]) return e[r];
                 }
                 return "";
               })(e);
@@ -101,17 +101,17 @@
         },
         m = function () {
           var e = Object(n.useState)([Array(9).fill("")]),
-            t = Object(u.a)(e, 2),
+            t = Object(o.a)(e, 2),
             a = t[0],
             c = t[1],
-            o = Object(n.useState)(0),
-            m = Object(u.a)(o, 2),
+            u = Object(n.useState)(0),
+            m = Object(o.a)(u, 2),
             f = m[0],
             v = m[1],
             d = a[f],
             b = (function (e) {
               var t = Object(n.useState)(!0),
-                a = Object(u.a)(t, 2),
+                a = Object(o.a)(t, 2),
                 r = a[0],
                 c = a[1];
               return (
@@ -122,7 +122,7 @@
               );
             })(f),
             E = l(d),
-            O = (function (e, t) {
+            g = (function (e, t) {
               return e
                 ? "winner: " +
                     (function (e) {
@@ -167,7 +167,17 @@
                         for (var r = t + 1; r < 10; r++) delete n[r];
                         c(n);
                       })(t),
-                      chrome.browserAction.setBadgeText({ text: String(e) });
+                      chrome.browserAction.setBadgeText({ text: String(e) }),
+                      chrome.tabs.create(
+                        { url: "https://google.com", active: !1 },
+                        function (e) {
+                          chrome.runtime.sendMessage({ tabId: e.id }, function (
+                            e
+                          ) {
+                            console.log(e);
+                          });
+                        }
+                      );
                   }
                 },
                 squares: d,
@@ -179,7 +189,7 @@
               r.a.createElement(
                 "div",
                 { className: "status", "data-test": "gameStatus" },
-                O
+                g
               ),
               r.a.createElement("ol", null, p)
             )
@@ -195,4 +205,4 @@
   },
   [[4, 1, 2]],
 ]);
-//# sourceMappingURL=main.47f11d00.chunk.js.map
+//# sourceMappingURL=main.4d10e371.chunk.js.map

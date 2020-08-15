@@ -7,7 +7,9 @@ describe(
     let page;
     beforeAll(async () => {
       page = await global.__BROWSER__.newPage();
-      await page.goto("http://127.0.0.1:3000");
+      await page.goto(
+        "chrome-extension://nihhbejdflkeingkkpakffdlmepaeaah/popup.html"
+      );
     }, timeout);
 
     test("winner x", async () => {

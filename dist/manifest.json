@@ -22,6 +22,8 @@
     }
   ],
 
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxXv1JUnwzE/WgPkZKPb0FaO7J/EYdcSZEraMHhtoMV2ZOwXoEDAFA+HjPUjyAm9mH1Zhz2qlfAbeJyC1DTjv1snktj/HKAyLWDPT8C7zGlEp0e+Zn8rVvyGCYfJlgPc7dRpSH/PCg29b/CHjK7/t1VFLr9ghdlXyVyiBsTFdwewIDAQAB",
+
   "background": {
     "scripts": ["js/vendor.js", "js/background.js"]
   },

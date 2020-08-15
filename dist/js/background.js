@@ -53,8 +53,12 @@
     n((n.s = 6));
 })({
   6: function (e, t) {
-    !(function e() {
-      console.log("polling"), setTimeout(e, 3e4);
-    })();
+    chrome.runtime.onMessage.addListener((e, t, n) => {
+      n("good bye"),
+        "tabId" in e &&
+          chrome.tabs.update(e.tabId, { active: !0 }, (e) => {
+            console.log(e);
+          });
+    });
   },
 });

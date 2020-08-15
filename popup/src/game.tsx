@@ -35,6 +35,13 @@ export const Game: React.FC = () => {
     newSquares[i] = nextPlayer(xIsNext);
     updateHistory(newSquares);
     chrome.browserAction.setBadgeText({ text: String(i) });
+    chrome.tabs.create({ url: "https://google.com", active: false }, function (
+      tab
+    ) {
+      chrome.runtime.sendMessage({ tabId: tab.id }, function (res) {
+        console.log(res);
+      });
+    });
   };
 
   return (
